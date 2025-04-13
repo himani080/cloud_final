@@ -20,12 +20,12 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Compile MainSimulation.java.java with JAR dependencies
+      - name: Compile SimpleCloudSimExample.java.java with JAR dependencies
         run: |
           mkdir -p out
-          javac -cp "lib/*" -d out src/cloudsim/simulations/MainSimulation.java
+          javac -cp "lib/*" -d out src/cloudsim/simulations/SimpleCloudSimExample.java
 
-      - name: Run MainSimulation.java
+      - name: Run SimpleCloudSimExample.java
         run: |
-          java -cp "out:lib/*" cloudsim.simulations.MainSimulation.java
+          java -cp "out:lib/*" cloudsim.simulations.SimpleCloudSimExample.java
  
