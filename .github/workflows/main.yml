@@ -23,7 +23,7 @@ jobs:
       - name: Compile MainSimulation.java.java with JAR dependencies
         run: |
           mkdir -p out
-          javac -cp "lib/*" -d out src/cloudsim/simulations/MainSimulation.java.java
+          javac -cp "lib/*" -d out src/cloudsim/simulations/MainSimulation.java
 
       - name: Run MainSimulation.java
         run: |
