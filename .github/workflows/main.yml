@@ -20,7 +20,7 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Compile AWS_Lambda_Simulation.java.java with JAR dependencies
+      - name: Compile AWS_Lambda_Simulation.java with JAR dependencies
         run: |
           mkdir -p out
           javac -cp "lib/*" -d out src/cloudsim/simulations/AWS_Lambda_Simulation.java
