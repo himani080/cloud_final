@@ -20,11 +20,11 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Compile AWS_Lambda_Simulation.java with JAR dependencies
+      - name: Compile HealthcareSimulation.java with JAR dependencies
         run: |
           mkdir -p out
-          javac -cp "lib/*" -d out src/cloudsim/simulations/AWS_Lambda_Simulation.java
+          javac -cp "lib/*" -d out src/cloudsim/simulations/HealthcareSimulation.java
 
-      - name: Run AWS_Lambda_Simulation
+      - name: Run HealthcareSimulation
         run: |
-          java -cp "out:lib/*" cloudsim.simulations.AWS_Lambda_Simulation
+          java -cp "out:lib/*" cloudsim.simulations.HealthcareSimulation
