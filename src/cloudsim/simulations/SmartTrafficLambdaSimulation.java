@@ -575,12 +575,16 @@ public class SmartTrafficLambdaSimulation {
                         Vm newVm = new Vm(nextVmId, brokerId, 1000, 2, 1024, 10000, 10000,
                                 "Xen", new CloudletSchedulerTimeShared());
                         vmList.add(newVm);
-                        broker.submitVmList(List.of(newVm));
+                    
+                        List<Vm> tempList = new ArrayList<>();
+                        tempList.add(newVm);
+                        broker.submitVmList(tempList);
+                    
                         vmMemoryUsage.put(nextVmId, new ArrayList<>());
                         vmId = nextVmId;
                         nextVmId++;
                     }
-
+                    
                     warmStartStatus.put(cloudlet.getCloudletId(), false);
                 }
 
