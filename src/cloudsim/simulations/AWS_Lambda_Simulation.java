@@ -67,7 +67,7 @@ public class AWS_Lambda_Simulation {
                 int functionType = info.getFunctionType();
                 currentTime = info.getExecutionTime();  // Simulation time for this execution
                 
-                System.out.println("\nTime: " + currentTime + " - Processing function execution for cloudlet " + 
+                System.out.println("\nTime: " + currentTime + " - Processin function execution for cloudlet " + 
                                  cloudlet.getCloudletId() + " (Function Type: " + functionType + ")");
                 
                 // Check for warm instances of this function
