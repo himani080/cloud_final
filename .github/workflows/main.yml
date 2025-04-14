@@ -25,7 +25,6 @@ jobs:
           mkdir -p out
           javac -cp "lib/*" -d out src/cloudsim/simulations/AWS_Lambda_Simulation.java
 
-      - name: Run AWS_Lambda_Simulation.java
+      - name: Run AWS_Lambda_Simulation
         run: |
-          java -cp "out:lib/*" cloudsim.simulations.AWS_Lambda_Simulation.java
- 
+          java -cp "out:lib/*" cloudsim.simulations.AWS_Lambda_Simulation
