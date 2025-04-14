@@ -20,11 +20,11 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Compile HealthcareSimulation.java with JAR dependencies
+      - name: Compile SmartTrafficLambdaSimulation.java with JAR dependencies
         run: |
           mkdir -p out
-          javac -cp "lib/*" -d out src/cloudsim/simulations/HealthcareSimulation.java
+          javac -cp "lib/*" -d out src/cloudsim/simulations/SmartTrafficLambdaSimulation.java
 
-      - name: Run HealthcareSimulation
+      - name: Run SmartTrafficLambdaSimulation
         run: |
-          java -cp "out:lib/*" cloudsim.simulations.HealthcareSimulation
+          java -cp "out:lib/*" cloudsim.simulations.SmartTrafficLambdaSimulation
