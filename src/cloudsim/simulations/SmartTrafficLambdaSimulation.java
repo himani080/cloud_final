@@ -166,7 +166,9 @@ System.out.println("================================\n");
         List<Host> hostList = new ArrayList<>();
 
         List<Pe> peList = new ArrayList<>();
-        peList.add(new Pe(0, new PeProvisionerSimple(1000)));
+        peList.add(new Pe(0, new PeProvisionerSimple(1000))); // PE id = 0
+        peList.add(new Pe(1, new PeProvisionerSimple(1000))); // PE id = 1
+        peList.add(new Pe(2, new PeProvisionerSimple(1000))); // Add more if needed
 
         int hostId = 0;
         int ram = 2048;
