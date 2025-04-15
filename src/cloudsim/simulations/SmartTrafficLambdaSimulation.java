@@ -142,7 +142,16 @@ public class SmartTrafficLambdaSimulation {
             }
 
             broker.submitCloudletList(cloudletList);
+            List<TrafficEvent> trafficEvents = new ArrayList<>();
+            trafficEvents.add(new TrafficEvent("Junction A", "congestion", 1.5));
+            trafficEvents.add(new TrafficEvent("Highway 7", "accident", 3.0));
+            trafficEvents.add(new TrafficEvent("Junction B", "normal", 5.5));
 
+System.out.println("\n=== Simulated Traffic Events ===");
+for (TrafficEvent event : trafficEvents) {
+    System.out.println(event);
+}
+System.out.println("================================\n");
             System.out.println("\nStarting CloudSim simulation...");
             CloudSim.startSimulation();
             CloudSim.stopSimulation();
@@ -281,5 +290,33 @@ class MemoryUsageRecord {
 
     public boolean isStart() {
         return start;
+    }
+}
+class TrafficEvent {
+    private String location;
+    private String eventType; // e.g., "accident", "congestion", "normal"
+    private double time;      // time of event
+
+    public TrafficEvent(String location, String eventType, double time) {
+        this.location = location;
+        this.eventType = eventType;
+        this.time = time;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getEventType() {
+        return eventType;
+    }
+
+    public double getTime() {
+        return time;
+    }
+
+    @Override
+    public String toString() {
+        return "[Time " + time + "] Event at " + location + ": " + eventType.toUpperCase();
     }
 }
