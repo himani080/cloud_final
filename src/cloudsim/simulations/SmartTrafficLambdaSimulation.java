@@ -173,7 +173,7 @@ System.out.println("================================\n");
         int hostId = 0;
         int ram = 2048;
         long storage = 1000000;
-        int bw = 10000;
+        int bw = 50000;
 
         hostList.add(new Host(hostId, new RamProvisionerSimple(ram),
                 new BwProvisionerSimple(bw), storage, peList,
