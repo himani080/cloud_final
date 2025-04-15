@@ -171,7 +171,7 @@ System.out.println("================================\n");
         peList.add(new Pe(2, new PeProvisionerSimple(2000))); // Add more if needed
 
         int hostId = 0;
-        int ram = 2048;
+        int ram = 4096;
         long storage = 1000000;
         int bw = 50000;
 
